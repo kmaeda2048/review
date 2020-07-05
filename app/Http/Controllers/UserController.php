@@ -36,7 +36,7 @@ class UserController extends Controller
             $user->image_url = $request['image_url'];
         }
         $user->save();
-        return $user;
+        return new UserResource($user);
     }
 
     /**
@@ -67,7 +67,7 @@ class UserController extends Controller
             $user->image_url = $request['image_url'];
         }
         $user->save();
-        return $user;
+        return new UserResource($user);
     }
 
     /**
